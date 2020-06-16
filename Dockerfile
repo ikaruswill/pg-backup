@@ -4,4 +4,4 @@ RUN apk add --no-cache postgresql-client gzip findutils bash
 ADD . /
 
 ENTRYPOINT ["/bin/bash", "-c"]
-CMD ["/pg_backup.sh -c /pg_backup.config"]
+CMD ["/pg-backup.sh -c /pg-backup.config"]
