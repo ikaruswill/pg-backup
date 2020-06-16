@@ -12,6 +12,15 @@ clone:
 steps:
 - name: publish
   image: plugins/docker
+  environment:
+    PLUGIN_MTU: 1440
+  resources:
+    requests:
+      cpu: 500
+      memory: 100MiB
+    limits:
+      cpu: 500
+      memory: 100MiB
   settings:
     repo: ikaruswill/pg-backup
     auto_tag: true
